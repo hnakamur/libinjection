@@ -6,7 +6,7 @@
 #LUA=/usr/bin/lua5.1
 
 # ubuntu luajit 2
-LUA_FLAGS=-I/usr/include/luajit-2.0 -lluajit-5.1
+LUA_FLAGS=-I/usr/include/luajit-2.1 -lluajit-5.1
 LUA=luajit
 
 # centos and friends
@@ -20,7 +20,7 @@ APPLE=$(shell uname -a | grep -c Darwin)
 # MAC OS X - brew install luajit
 ifeq ($(APPLE),1)
 	SHARED=-dynamiclib
-	LUA_FLAGS=-I/usr/local/include/luajit-2.0 -L/usr/local/lib -lluajit-5.1
+	LUA_FLAGS=-I/usr/local/include/luajit-2.1 -L/usr/local/lib -lluajit-5.1
 	LUA=luajit
 endif
 
